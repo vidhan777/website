@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .img
+    {       
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.but1
+{
+    background-color: rgb(67, 250, 67);
+ padding: 20px 30px;
+ border-radius: 15px;
+}
+.but2
+{
+    background-color: rgb(67, 250, 67);
+ padding: 20px 30px;
+ border-radius: 15px;
+}
+</style>
+</head>
+<body>
+    <img src="car1.gif" class="img">
+    <center>
+    <h2 id="txt1">Can you be my valentine?🥰😘😍</h2>
+    <input type="button" value="Yes" class="but1" id="but1" onclick="like()" >
+    <input type="button" value="No" class="but2" id="but2" onclick="increase();decrease();change()">
+</center>
+<script>
+   
+    
+    function increase()
+    {
+        let yesbutton=document.getElementById("but1")
+        let currentWidth = yesbutton.offsetWidth;
+      let currentHeight = yesbutton.offsetHeight;
+
+      yesbutton.style.width = (currentWidth + 30) + "px";
+      yesbutton.style.height = (currentHeight + 30) + "px";
+    }
+    function decrease() {
+        let noButton = document.getElementById("but2");
+        let currentWidth = noButton.offsetWidth;
+        let currentHeight = noButton.offsetHeight;
+
+      noButton.style.width = (currentWidth - 20) + "px";
+      noButton.style.height = (currentHeight - 20) + "px";
+        
+    }
+    function change() {
+            document.getElementById("txt1").innerText = "Are you sure? 😢";
+        }
+        let index = 0;
+
+function change() {
+    let messages = [
+            "Are you sure? 😢",
+            "Really? 💔",
+            "Think again... 🥺",
+            "Last chance! 😭",
+            "last and final chance!😥",
+            "Please!!!!..😓",
+            "You're breaking my heart 😭",
+           "Why are you doing this to me? 😢",
+            "I thought we had something special 😞",
+         "Please reconsider... 🥺",
+           "I'll give you chocolates! 🍫",
+           "What if I say pretty please? 🥹",
+            "You're colder than winter ❄️",
+             "Even my pet is sad now 🐶💔",
+             "Okay, now I'm crying... 😭",
+             "You're really enjoying this, aren't you? 🤨",
+            "Fine! No more Netflix password for you! 😤",
+            "You're gonna regret this... 😏",
+            "I promise I'll be nice! 😊",
+    "You can't be this heartless... 💔",
+    "Even the sun is sad now ☀️😞",
+    "Fine! I'm telling my mom! 😠",
+    "If you say no again, I'll uninstall your favorite app! 📱❌",
+    "I wrote you a song, but now I'll delete it 🎶💀",
+    "Do you even have a heart? 🫀😭",
+    "What if I say you're my favorite person? 🤩",
+    "Okay, now you're just bullying me 😢",
+    "I bet you secretly like me 😏",
+    "I was just joking... but now I'm serious! 🧐",
+    "Last, last, last, FINAL chance! 🚨",
+    "I hope you step on a LEGO 😈",
+    "Guess I'll just be lonely forever... 😞",
+    "My grandma would have said yes! 👵💖",
+    "I should've asked your best friend instead! 😤",
+    "You're breaking my AI heart 💔🤖",
+    "I'm sending this chat to the heartbreak police! 🚓",
+        ];
+    let txtElement = document.getElementById("txt1");
+
+    if (index < messages.length) {
+        txtElement.innerText = messages[index];
+        index++;
+    } else {
+        txtElement.innerText = "Okay... I'll stop asking 😔";
+    }
+}
+
+    function like()
+  
+  {    window.location.href = "show.html";
+}
+    
+   
+</script>
+</body>
+</html>
